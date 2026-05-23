@@ -69,6 +69,41 @@ As a contributor, your workflow is:
 
 ---
 
+## Changing the Default Branch to `main`
+
+If the default branch was set to a feature branch (e.g., `feat_re_design`) instead of `main`, GitHub Pages and new clones will use the wrong branch until this is fixed.
+
+### Instructions for the Repository Owner
+
+1. Go to the repository on GitHub:
+   `https://github.com/sorokin322/appliance-repair-web-site`
+
+2. Click **Settings** (the gear icon tab at the top of the repo).
+
+3. In the left sidebar, click **General**.
+
+4. Under **Default branch**, click the switch/edit icon next to the current branch name.
+
+5. Select **`main`** from the dropdown.
+
+6. Click **Update**, then confirm with **I understand, update the default branch**.
+
+After this change, the repo homepage and GitHub Pages (if configured to deploy from `main`) will use the correct branch.
+
+### For Contributors
+
+Contributors cannot change the default branch. If you do not see the **Settings** tab, ask the repository owner to follow the steps above.
+
+To sync your local repo after the default branch is updated:
+
+```bash
+git fetch origin
+git checkout main
+git pull origin main
+```
+
+---
+
 ## Setting Up Resend.com (Email Service for the Booking Form)
 
 ### Why Resend?
